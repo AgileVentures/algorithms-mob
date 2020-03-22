@@ -21,3 +21,4 @@ def maximum_sum_subarray(a, k):
     return max_sum
 
 print(maximum_sum_subarray([4,2,1,7,8,1,2,8,1,0], 3))
+print(maximum_sum_subarray([4,2,1,7,8,1,2,8,1,0], 4))
