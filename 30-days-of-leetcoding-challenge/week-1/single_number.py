@@ -15,7 +15,7 @@
 
 
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int: 
+    def singleNumber(self, nums) -> int: 
         from collections import defaultdict
         count_of_numbers = defaultdict(int)
         for i in nums:
@@ -26,5 +26,5 @@ class Solution:
         return
 
 s = Solution()
-s.singleNumber([4,1,2,1,2]) # 4
-s.singleNumber([2,1,2]) # 1
+print(s.singleNumber([4,1,2,1,2])) # 4
+print(s.singleNumber([2,1,2])) # 1
