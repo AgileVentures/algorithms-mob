@@ -24,7 +24,31 @@ class Solution:
             if count_of_numbers[k] == 1:
                 return k
         return
+    
+    def singleNumberAsSet(self, nums) -> int:
+        nums_set = set()
+        for i in nums:
+            if i in nums_set:
+                nums_set.remove(i)
+            else:
+                nums_set.add(i)
+        return nums_set.pop()
+    
+    def singleNumberWithXOR(self, nums) -> int:
+        """
+            Memory complexty o(1)
+            Time complexity o(n)
+            uses xor
+        """
+        result = 0
+        for i in nums:
+            result ^= i
+        return result
 
 s = Solution()
 print(s.singleNumber([4,1,2,1,2])) # 4
 print(s.singleNumber([2,1,2])) # 1
+print(s.singleNumberAsSet([4,1,2,1,2])) # 4
+print(s.singleNumberAsSet([2,1,2])) # 1
+print(s.singleNumberWithXOR([4,1,2,1,2])) # 4
+print(s.singleNumberWithXOR([2,1,2])) # 1
