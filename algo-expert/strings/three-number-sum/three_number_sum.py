@@ -1,3 +1,18 @@
+
+# Write an algrithm that takes a non empty array and an integer representing target sum
+#  The function should find all triplets in the array that sum up to the targetSum
+#  and return a two dimensional array of all these triplets
+# The numbers on each triplet shoi=uld be ordrered in an ascending order 
+#  And the triplets themselves should be ordered in an ascending order with respect to the values they hold
+#  If no three elements sum up to the target sum the function should return an empty array
+
+## Example
+# Sample input 
+#     array = [12, 3, 1, 2, -6, 5, -8, 6]
+#     target_sum = 0
+
+# Sample output
+# [12, 3, 1, 2, -6, 5, -8, 6]
 class ThreeNumberSum():
 
     def __init__(self):
