@@ -14,9 +14,28 @@ class TwoNumberSum:
     def __init__(self):
         pass
     def get_two_sum_with_n_squared_time(self, array, total_sum):
-        
+        """
+            Time complexit o(n^2)
+            space complexity o(1)
+        """
+
         for i in range(len(array)):
             diff = total_sum - array[i]
             if diff in array[:i] or diff in array[i+1:]:
                 return [array[i], diff]
+        return []
+
+    def get_two_sum_using_a_dict(self, array, total_sum):
+        """
+            time complexity o(n)
+            space complexity o(n)
+        """
+        lookup_dict = {}
+
+        for i in array:
+            diff = total_sum - i
+            if diff in lookup_dict:
+                return [i, diff]
+            else:
+                lookup_dict[i] = True
         return []
