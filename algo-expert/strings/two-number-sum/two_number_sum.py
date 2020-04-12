@@ -39,3 +39,24 @@ class TwoNumberSum:
             else:
                 lookup_dict[i] = True
         return []
+
+    def get_two_sum_by_first_sorting_list(self, array, total_sum):
+        """
+            Time complexity o(n log n)
+            space complexity o(1)
+        """
+        array.sort()
+        start_index = 0
+        end_index = len(array) - 1
+
+        while end_index > start_index:
+            current_sum = array[start_index] + array[end_index]
+
+            if current_sum > total_sum:
+                end_index -= 1
+            elif current_sum < total_sum:
+                start_index += 1
+            else:
+                return [array[start_index], array[end_index]]
+        return []
+        
