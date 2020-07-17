@@ -13,6 +13,7 @@
 
 require '../node.rb'
 
+
 class SumList
   ListSumDigitResult = Struct.new(:value, :carry) do
     def something?

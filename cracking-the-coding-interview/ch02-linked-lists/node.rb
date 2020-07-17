@@ -2,12 +2,12 @@ class Node
 	attr_accessor :value, :next
 
 	def self.from_array(array)
-		return nil if array.empty?
-		result = node = Node.new(array.first)
-		1.upto(array.size - 1) do |index|
-			node.next = Node.new(array[index])
-			node = node.next
-		end
+    return nil if array.empty?
+    result = node = Node.new(array.delete_at(0))
+		array.each do |value|
+			node.next = Node.new(value)
+      node = node.next
+    end
 		result
 	end
 
