@@ -24,6 +24,9 @@ def dutch_national_flag_partition(arr, idx):
     swap_here = current_index = 0
     while current_index < len(arr):
         if arr[current_index] < pivot:
+            if arr[swap_here] > pivot:
+                swap_here += 1
+                continue
             arr[current_index], arr[swap_here] =  arr[swap_here], arr[current_index]
             swap_here += 1
         current_index += 1
